@@ -135,6 +135,12 @@ X <- data.frame(x1, x2, x3); X
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35454550-5f1e278a-02c6-11e8-8f7e-bf0319932042.jpg" />
 
+ - typical starting **DataFrame** !
+```
+names(X)
+dim(X)
+str(X) 
+```
  - Selection
 ```
 X[ ,c(1,3)]
@@ -160,14 +166,22 @@ table(x1,x2,x3)
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35455444-ce4118ea-02c9-11e8-8442-05c39031bf9d.jpg" />
 
+>poisson generates integers..then we can convert the table-result into a dataframe! 
+```
+y <- rpois(200, 1.5); y
+table(y)
+data.frame(table(y))
+```
+<img src="https://user-images.githubusercontent.com/31917400/35455633-a03e3562-02ca-11e8-9413-518d77c732a3.jpg" width="650" height="170" />
 
 
- - typical starting **DataFrame** !
-```
-names(df)
-dim(df)
-str(df) 
-```
+
+
+
+
+
+
+
 
 
 
