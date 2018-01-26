@@ -124,6 +124,18 @@ rownames(A) <- c(1:2, 'SUM'); A
 <img src="https://user-images.githubusercontent.com/31917400/35451432-21503d40-02bb-11e8-96ec-2ff03a525f99.jpg" />
 
 ### 3. dataframe
+ - All entry vectors (columns) should be in the same length!
+```
+x1 <- c(8,2,6,4,5,3,7,1,9,10)
+x2 <- c('d','i','i','i','e','i','g','i','i','c')
+x3 <- c('TRUE','TRUE','FALSE','NA','FALSE','TRUE','NA','TRUE','FALSE','FALSE')
+is.na(x3) <- x3=='NA' #'creating missing data..
+
+X <- data.frame(x1, x2, x3); X
+```
+<img src="https://user-images.githubusercontent.com/31917400/35454550-5f1e278a-02c6-11e8-8f7e-bf0319932042.jpg" />
+
+
 
 
 
