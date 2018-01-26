@@ -8,7 +8,10 @@ Vectors must contain the same type of data, that is the entries must all be of t
  - `c()` is a generic function that combines arguments to form a vector.
 ```
 L <- c("Chris Saden", "Lauren Castellano","Sarah Spikes","Dean Eckles","Andy Brown", "Moira Burke","Kunal Chawla")
+
 V <- c(100,200,300)
+V <- seq(from=100, to=300, by=100)
+
 N <- c(1:10); N
 N <- c(N, 11:20); N
 ```
@@ -35,9 +38,16 @@ mystery == 11
 L[mystery == 11]
 ```
  [1]  TRUE FALSE FALSE  TRUE FALSE  TRUE FALSE FALSE
+ 
  [1] "Chris Saden" "Dean Eckles" "Moira Burke"
 
- - 
+ - typical starting **DataFrame** !
+```
+names(df)
+dim(df)
+str(df) 
+```
+
 
 
 
