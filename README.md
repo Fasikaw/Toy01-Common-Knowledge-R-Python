@@ -140,7 +140,17 @@ X <- data.frame(x1, x2, x3); X
 names(X)
 dim(X)
 str(X) 
+is.na(x3) 
+sum(is.na(X)) 
+
+apply(X, 2, is.na)
+apply(apply(X, 2, is.na), 2, sum)
+
+#delete all rows with 'na'
+Y = na.omit(X); Y
 ```
+<img src="https://user-images.githubusercontent.com/31917400/35455949-ccd5161c-02cb-11e8-8005-dc2f7825c297.jpg" width="650" height="170" />
+
  - Selection
 ```
 X[ ,c(1,3)]
