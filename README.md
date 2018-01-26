@@ -53,18 +53,33 @@ B <- matrix(b_num, b_dim); B
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35448597-9944f66e-02b2-11e8-889d-68f9eb5dda76.jpg" />
 
-
 ```
-C <- matrix(nrow=2,ncol=3); C
+C <- matrix(nrow=2,ncol=3)
 C[,1] <- c(1,2)
 C[,2] <- c(3,4)
 C[,3] <- c(5,6); C
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35448597-9944f66e-02b2-11e8-889d-68f9eb5dda76.jpg" />
 
+**Q1.** Generate 20 random samples from Poisson with (lambda:2.5) and creating matrix with nrow=4, thus ncol=5 ?
+```
+P <- matrix(rpois(20, 2.5), nrow=4); P
+qplot(rpois(20, 2.5), binwidth=1) 
+```
+<img src="https://user-images.githubusercontent.com/31917400/35449794-ed1f403e-02b5-11e8-9b3b-55dc0781d6f7.jpg" width="450" height="120" />
 
+**Q2.** Generate 20 random samples from Exponential with (lambda:2.5), creating matrix with nrow=4, ncol=5, then generate 20 random samples from "CDF of Exponential" with (lambda:2.5), creating matrix with nrow=4, thus ncol=5 ?
+```
+E <- matrix(rexp(20, 2.5), nrow=4); E
 
+n <- 20
+lambda <- 2.5
+u <- runif(n)
+x <- - log(1-u)/lambda
 
+F <- matrix(x, nrow=4); F
+```
+<img src="https://user-images.githubusercontent.com/31917400/35450381-c1047b0c-02b7-11e8-987d-1f2a9bb21369.jpg" width="650" height="170" />
 
 
 
