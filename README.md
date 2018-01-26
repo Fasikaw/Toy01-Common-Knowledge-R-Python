@@ -194,7 +194,18 @@ data.frame(table(y))
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35455633-a03e3562-02ca-11e8-9413-518d77c732a3.jpg" width="650" height="170" />
 
+ - random reproduction
+```
+A <- rep(c(1:3), each = 3)
+A1 <- rep(c(1:3), 3)
+df <- data.frame(A,A1); df
 
+x <- runif(10); x #random uniform
+y <- letters[5:14]; y #WTF!!! is letter[ ] is a function??
+z <- sample(c(rep(T,5), rep(F,5))); z #random T/F
+yxz <- data.frame(y,x,z); yxz
+```
+<img src="https://user-images.githubusercontent.com/31917400/35456518-b1a7fa7e-02cd-11e8-87c0-0b3b80f879e6.jpg" />
 
 
 
