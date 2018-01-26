@@ -152,9 +152,8 @@ Y = na.omit(X); Y
 <img src="https://user-images.githubusercontent.com/31917400/35455949-ccd5161c-02cb-11e8-8005-dc2f7825c297.jpg" width="650" height="170" />
 
 >Want to drop some ?
-X$x3[4] <- X$x3[7] <- NULL #doesnt work.. WHY? it only works when it's an "entire column"..
 
->for example..
+`X$x3[4] <- X$x3[7] <- NULL` doesnt work.. WHY? it only works when it's an "entire column"..for example,
 ```
 X$x3 <- NULL #:it works..
 X[3, ] <- NULL #:it doesn't work..'NULL' only works with columns? 
