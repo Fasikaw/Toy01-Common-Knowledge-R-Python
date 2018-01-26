@@ -2,7 +2,7 @@
 Don't forget
 
 ------------------------------------------------------------------------------------------------------------------------------------
-### *R*
+# *R*
 #### 1. vector
 Vectors must contain the same type of data, that is the entries must all be of the **same type** such as: character, logical (TRUE or FALSE), or numeric. You can add values to a vector.
  - `c()` is a generic function that combines arguments to form a vector.
