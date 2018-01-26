@@ -202,10 +202,10 @@ df <- data.frame(A,A1); df
 
 x <- runif(10); x #random uniform
 y <- letters[5:14]; y #WTF!!! is letter[ ] is a function??
-z <- sample(c(rep(T,5), rep(F,5))); z #random T/F
+z <- sample(c(rep('T',5), rep('F',5))); z #random T/F
 yxz <- data.frame(y,x,z); yxz
 ```
-<img src="https://user-images.githubusercontent.com/31917400/35456518-b1a7fa7e-02cd-11e8-87c0-0b3b80f879e6.jpg" />
+<img src="https://user-images.githubusercontent.com/31917400/35456712-66d1cc5e-02ce-11e8-8f9d-a5480d50e2e8.jpg" />
 
 
 
