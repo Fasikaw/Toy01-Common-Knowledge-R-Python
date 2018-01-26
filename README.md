@@ -150,6 +150,15 @@ X[!(x2=='i'), ] #show all rows except x2 are 'i'
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35455062-73549034-02c8-11e8-98a1-9f41f2934e53.jpg" />
 
+ - Counting the frequency
+```
+table(x1) 
+table(x2)
+table(x3)
+table(x1, x2)
+table(x1,x2,x3)
+```
+<img src="https://user-images.githubusercontent.com/31917400/35455444-ce4118ea-02c9-11e8-8442-05c39031bf9d.jpg" />
 
 
 
