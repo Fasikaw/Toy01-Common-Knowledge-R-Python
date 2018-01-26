@@ -41,6 +41,50 @@ L[mystery == 11]
  
  [1] "Chris Saden" "Dean Eckles" "Moira Burke"
 
+#### 2. matrix
+```
+A <- matrix(c(1,2,3,4,5,6), 2,3); A
+```
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+
+```
+b_num <- 1:6
+b_dim <- c(2,3)
+B <- matrix(b_num, b_dim); B
+```
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+
+```
+C <- matrix(nrow=2,ncol=3); C
+C[,1] <- c(1,2)
+C[,2] <- c(3,4)
+C[,3] <- c(5,6); C
+```
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### 3. dataframe
+
+
+
  - typical starting **DataFrame** !
 ```
 names(df)
