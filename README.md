@@ -2,7 +2,7 @@
 Don't forget
 
 ------------------------------------------------------------------------------------------------------------------------------------
-### R
+### *R*
 #### 1. vector
 Vectors must contain the same type of data, that is the entries must all be of the **same type** such as: character, logical (TRUE or FALSE), or numeric. You can add values to a vector.
  - `c()` is a generic function that combines arguments to form a vector.
@@ -18,8 +18,11 @@ N <- c(N, 11:20); N
  
  - Give names to the vector data
 ```
-names(V) <- c(‘human’, ‘animal’, ‘tree’)
+names(V) <- c(‘human’, ‘animal’, ‘tree’); V
 ```
+ human animal   tree 
+   100    200    300 
+
  - A vector that contains the number of characters for each of the names in
 ```
 mystery = nchar(L); mystery
