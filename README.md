@@ -23,8 +23,7 @@ N <- c(N, 11:20); N
 ```
 names(V) <- c(‘human’, ‘animal’, ‘tree’); V
 ```
- human animal   tree 
-   100    200    300 
+<img src="https://user-images.githubusercontent.com/31917400/35448840-4aad3790-02b3-11e8-9d24-73dfa750662f.jpg" />
 
  - `nchar()` gives a vector that contains the number of characters for each of the names in
 ```
