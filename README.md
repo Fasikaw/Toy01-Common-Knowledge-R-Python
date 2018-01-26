@@ -176,7 +176,7 @@ X[!(x2=='i'), ] #show all rows except x2 are 'i'
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35455062-73549034-02c8-11e8-98a1-9f41f2934e53.jpg" />
 
- - Counting the frequency
+ - `table()` Counting the frequency
 ```
 table(x1) 
 table(x2)
@@ -194,7 +194,7 @@ data.frame(table(y))
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35455633-a03e3562-02ca-11e8-9413-518d77c732a3.jpg" width="650" height="170" />
 
- - random reproduction
+ - `sample(c())` random reproduction
 ```
 A <- rep(c(1:3), each = 3)
 A1 <- rep(c(1:3), 3)
@@ -207,9 +207,13 @@ yxz <- data.frame(y,x,z); yxz
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35456712-66d1cc5e-02ce-11e8-8f9d-a5480d50e2e8.jpg" />
 
+ - `subset(data, cond, selecting vector)` select multiple columns at once.
+```
+subset(mtcars, mpg>=30|hp<60, c(vs,am))
 
-
-
+mtcars[mtcars$mpg>=30|mtcars$hp<60, ]  # the above is better than this. 
+```
+<img src="https://user-images.githubusercontent.com/31917400/35457213-09931bf4-02d0-11e8-907d-19dfb93de2ab.jpg" width="650" height="120" />
 
 
 
