@@ -135,6 +135,20 @@ X <- data.frame(x1, x2, x3); X
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35454550-5f1e278a-02c6-11e8-8f7e-bf0319932042.jpg" />
 
+ - Selection
+```
+X[ ,c(1,3)]
+X[3:5, c(1,3)]
+X[3,1:2]
+X[sample(1:8, 4), ] #in all rows, choose 4 rows at random.. 
+X[order(x1), ] #sort by row based on column 'x1' 
+X[X$x1 > 5 & X$x2 == 'i', ] #what the fuck is the which??
+X[which(X$x1 > 5 | X$x2 == 'i'), ]
+X[ ,sapply(X, is.numeric)] #show all columns..that consist of numbers..WHY sapply()? 
+X[-c(2,5), ] #show all rows except the row 2, 5
+X[!(x2=='i'), ] #show all rows except x2 are 'i'
+```
+<img src="https://user-images.githubusercontent.com/31917400/35455062-73549034-02c8-11e8-98a1-9f41f2934e53.jpg" />
 
 
 
