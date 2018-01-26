@@ -116,7 +116,13 @@ B <- rbind(B, colSums(B)); B
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35451170-3f2cecd8-02ba-11e8-8fd8-a53feea3fced.jpg" />
 
-
+ - Re-label the headers..row, col
+```
+names(A)
+colnames(A) <- c(1:3, 'SUM')
+rownames(A) <- c(1:2, 'SUM'); A
+```
+<img src="https://user-images.githubusercontent.com/31917400/35451432-21503d40-02bb-11e8-96ec-2ff03a525f99.jpg" />
 
 
 
