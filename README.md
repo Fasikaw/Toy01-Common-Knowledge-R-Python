@@ -3,7 +3,7 @@ Don't forget
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # *R*
-#### 1. vector
+### 1. vector
 Vectors must contain the same type of data, that is the entries must all be of the **same type** such as: character, logical (TRUE or FALSE), or numeric. You can add values to a vector.
  - `c()` is a generic function that combines arguments to form a vector.
 ```
@@ -40,7 +40,7 @@ L[mystery == 11]
  
  [1] "Chris Saden" "Dean Eckles" "Moira Burke"
 
-#### 2. matrix
+### 2. matrix
 ```
 A <- matrix(c(1,2,3,4,5,6), 2,3); A
 ```
@@ -78,9 +78,46 @@ u <- runif(n)
 x <- - log(1-u)/lambda
 
 F <- matrix(x, nrow=4); F
+
+qplot(x)
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35450381-c1047b0c-02b7-11e8-987d-1f2a9bb21369.jpg" width="650" height="170" />
 
+**Q3.** Write a sample generater in the 'inv_exp' function
+```
+inv_exp <- function(n, lambda) {
+  u <- runif(n)
+  x <- - log(1-u)/lambda
+  x
+}
+
+qplot(inv_exp(20, 2.5))
+```
+
+ - `colSums()`,`rowSums()` give SUM of columns or rows in the matrix
+```
+A <- matrix(c(1,2,3,4,5,6), 2,3); A
+
+b_num <- 1:6
+b_dim <- c(2,3)
+B <- matrix(b_num, b_dim); B
+```
+```
+rowSums(A)
+colSums(A)
+
+apply(A, 1, sum) #1 is row
+apply(A, 2, sum) #2 is col
+```
+ - `cbind()`,`rbind()` add them to the original matrix? 
+```
+A <- cbind(A, apply(A, 1, sum))
+A <- rbind(A, apply(A, 2, sum)); A
+
+B <- cbind(B, rowSums(B))
+B <- rbind(B, colSums(B)); B
+```
+<img src="https://user-images.githubusercontent.com/31917400/35451170-3f2cecd8-02ba-11e8-8fd8-a53feea3fced.jpg" />
 
 
 
@@ -90,10 +127,7 @@ F <- matrix(x, nrow=4); F
 
 
 
-
-
-
-#### 3. dataframe
+### 3. dataframe
 
 
 
