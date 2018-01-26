@@ -16,14 +16,14 @@ N <- c(N, 11:20); N
  
  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
  
- - Give names to the vector data
+ - `names()` gives names to the vector data
 ```
 names(V) <- c(‘human’, ‘animal’, ‘tree’); V
 ```
  human animal   tree 
    100    200    300 
 
- - A vector that contains the number of characters for each of the names in
+ - `nchar()` gives a vector that contains the number of characters for each of the names in
 ```
 mystery = nchar(L); mystery
 ```
