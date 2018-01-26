@@ -215,10 +215,27 @@ mtcars[mtcars$mpg>=30|mtcars$hp<60, ]  # the above is better than this.
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35457213-09931bf4-02d0-11e8-907d-19dfb93de2ab.jpg" width="650" height="120" />
 
+ - `factor()` Factor variables are **categorical variables** that can be either numeric or string. There are a number of advantages to converting categorical variables to factor variables. First, they can be used in statistical modeling where they will be implemented correctly, i.e., they will then be assigned the correct number of **degrees of freedom**. Factor variables are also very useful in many different types of graphics. Furthermore, storing string variables as factor variables is a more efficient use of memory. The only required argument is a **vector of values** which can be either string or numeric. 
+ - 'levels' argument: determines the categories of the factor variable, and the default is the sorted list of all distinct values. 
+ - 'labels' argument: a vector of values that will be the labels of the categories in the levels argument. 
+ - 'exclude' argument: defines which levels will be classified as NA in any output using the factor variable.
+```
+a <- sample(0:5, 40, replace = TRUE); a
+is.factor(a)
+is.numeric(a)
+```
+<img src="https://user-images.githubusercontent.com/31917400/35457816-1a4eba82-02d2-11e8-9a2a-5b044ce15411.jpg" width="650" height="50" />
 
+```
+f_a <- factor(a, levels=c('A', 'C', 'B', 'F', 'DAMN', 'D')); f_a
+is.factor(f_a)
+levels(f_a)
 
-
-
+f_a <- factor(a, labels=c('A', 'C', 'B', 'F', 'DAMN', 'D')); f_a
+is.factor(f_a)
+levels(f_a)
+```
+<img src="https://user-images.githubusercontent.com/31917400/35462164-bb0d03ba-02e2-11e8-8d28-4c108f6f0b70.jpg" width="650" height="50" />
 
 
 
