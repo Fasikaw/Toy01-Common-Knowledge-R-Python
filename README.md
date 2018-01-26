@@ -68,7 +68,7 @@ qplot(rpois(20, 2.5), binwidth=1)
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35449794-ed1f403e-02b5-11e8-9b3b-55dc0781d6f7.jpg" width="450" height="120" />
 
-**Q2.** Generate 20 random samples from Exponential with (lambda:2.5), creating matrix with nrow=4, ncol=5, then generate 20 random samples from "CDF of Exponential" with (lambda:2.5), creating matrix with nrow=4, thus ncol=5 ?
+**Q2.** Generate 20 random samples from Exponential with (lambda:2.5), creating matrix with nrow=4, ncol=5, then generate 20 random samples from "CDF of Exponential" with (lambda:2.5), creating matrix with nrow=4, thus ncol=5 ? Write a sample generater in the 'inv_exp' function.
 ```
 E <- matrix(rexp(20, 2.5), nrow=4); E
 
@@ -80,11 +80,7 @@ x <- - log(1-u)/lambda
 F <- matrix(x, nrow=4); F
 
 qplot(x)
-```
-<img src="https://user-images.githubusercontent.com/31917400/35450381-c1047b0c-02b7-11e8-987d-1f2a9bb21369.jpg" width="650" height="170" />
 
-**Q3.** Write a sample generater in the 'inv_exp' function
-```
 inv_exp <- function(n, lambda) {
   u <- runif(n)
   x <- - log(1-u)/lambda
@@ -93,6 +89,7 @@ inv_exp <- function(n, lambda) {
 
 qplot(inv_exp(20, 2.5))
 ```
+<img src="https://user-images.githubusercontent.com/31917400/35450381-c1047b0c-02b7-11e8-987d-1f2a9bb21369.jpg" width="650" height="170" />
 
  - `colSums()`,`rowSums()` give SUM of columns or rows in the matrix
 ```
