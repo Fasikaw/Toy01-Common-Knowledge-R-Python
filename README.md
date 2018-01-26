@@ -140,6 +140,7 @@ X <- data.frame(x1, x2, x3); X
 names(X)
 dim(X)
 str(X) 
+summary(X)
 is.na(x3) 
 sum(is.na(X)) 
 
@@ -201,7 +202,7 @@ A1 <- rep(c(1:3), 3)
 df <- data.frame(A,A1); df
 
 x <- runif(10); x #random uniform
-y <- letters[5:14]; y #WTF!!! is letter[ ] is a function??
+y <- letters[5:14]; y 
 z <- sample(c(rep('T',5), rep('F',5))); z #random T/F
 yxz <- data.frame(y,x,z); yxz
 ```
@@ -235,9 +236,11 @@ f_a <- factor(a, labels=c('A', 'C', 'B', 'F', 'DAMN', 'D')); f_a
 is.factor(f_a)
 levels(f_a)
 ```
-<img src="https://user-images.githubusercontent.com/31917400/35462164-bb0d03ba-02e2-11e8-8d28-4c108f6f0b70.jpg" width="650" height="50" />
+<img src="https://user-images.githubusercontent.com/31917400/35462164-bb0d03ba-02e2-11e8-8d28-4c108f6f0b70.jpg" width="650" height="80" />
 
-
+ - `ordered()` Create ordered factor variables. This function has the same arguments as the factor function. 
+```
+```
 
 
 
