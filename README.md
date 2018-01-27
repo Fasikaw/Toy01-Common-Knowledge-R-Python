@@ -505,10 +505,25 @@ Thinking about how different pieces of data relate to each other is at the heart
  - create statement: CREATE TABLE table (col_1 value_1, col_2 value_2,...)  
  - insert statement: INSERT table (col_1, col_2,...) VALUE (val_1, val_2,...)
 
+( https://www.postgresql.org/docs/9.4/static/sql-createdatabase.html )
+( https://www.postgresql.org/docs/9.4/static/sql-dropdatabase.html )
+( https://www.postgresql.org/docs/9.4/static/sql-createtable.html )
+( https://www.postgresql.org/docs/9.4/static/sql-droptable.html )
 
 >Connect Python code into a SQL-database
 <img src="https://user-images.githubusercontent.com/31917400/35477173-c561ca98-03b5-11e8-8ea8-2d16054f3513.jpg" />
 
+```
+import psycopg2 as sq
+
+db = sq.connect('path')
+cursor = db.cursor()
+cursor.execute('query')
+
+results = cursor.fetchall()
+print(results)
+
+conn.close()
 ```
 
 
