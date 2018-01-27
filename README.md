@@ -488,7 +488,7 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 <img src="https://user-images.githubusercontent.com/31917400/35475250-0b6a157c-0393-11e8-8184-68c0469156e4.jpg" width="700" height="80" /> 
 
  - rename columns
-<img src="https://user-images.githubusercontent.com/31917400/35475286-83b2a62a-0393-11e8-84a4-146e0b1525ab.jpg" width="700" height="290" /> 
+<img src="https://user-images.githubusercontent.com/31917400/35475286-83b2a62a-0393-11e8-84a4-146e0b1525ab.jpg" width="700" height="240" /> 
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # *SQL*
@@ -496,7 +496,7 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 ### 0. Basic
 Thinking about how different pieces of data relate to each other is at the heart of relational databases
 <img src="https://user-images.githubusercontent.com/31917400/35476981-b554aa66-03b1-11e8-8df6-679c7bb283f8.jpg" width="300" height="160" /> 
-
+<img src="https://user-images.githubusercontent.com/31917400/35477036-d3ac95d6-03b2-11e8-99dc-f850dde7d5bf.jpg" width="300" height="160" /> 
 
 >Data Type
 <img src="https://user-images.githubusercontent.com/31917400/35476878-e4f73c9a-03af-11e8-9af6-272f78e9e99d.jpg" width="500" height="600" /> 
