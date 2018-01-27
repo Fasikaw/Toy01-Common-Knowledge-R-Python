@@ -313,7 +313,7 @@ table(a_f, ses_f)
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35466579-efc15312-02fc-11e8-9ca0-7bab35f1fa01.jpg" width="650" height="140" />
 
-As in the tables the factor variable will indicate a better ordering of the graphs as well as add useful labels.
+`bwplot()` As in the tables the factor variable will indicate a better ordering of the graphs as well as add useful labels.
 ```
 library(lattice)
 bwplot(a_f ~ read | ses_ff, data = combo, layout = c(2, 2))
