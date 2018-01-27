@@ -321,7 +321,7 @@ bwplot(a_f ~ read | ses_ff, data = combo, layout = c(2, 2))
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35466646-7f937c22-02fd-11e8-914c-82a833c4eb2d.jpg" width="400" height="300" />
 
-
+### 4. Simple Data formatting before Visualization 
 
 
 
