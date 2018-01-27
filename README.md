@@ -430,7 +430,8 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 # *Python*
 ### 0. Basic
  - Check type: `type()` 
- - Convert type: `int()`, `float()`, `str()`
+ - Convert type: `int()`, `float()`, `str()`, `list()`
+   - list('AB') --- ['A', 'B']
  - '$'`.join(str)`
    - city = 'scjen%$38' then, '$'.join(city) --> 's$c$j$e$n$%$$$3$8'
  - in string, \n :start a new line, \t :create a tab space
@@ -443,7 +444,7 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
    - str`.split()`
    - str`.strip('char')` ---note:only works for char in the 'first' and 'last'.  
    - str`.replace("morning", "night")`
-   - str1`.index(str2)
+   - str1`.index(str2)`
   
 
  - Built-in function for **LIST**
@@ -460,15 +461,34 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
      - list`.pop(i)` returns the value of i index. the default is the last item.
      - 
      
-### 1. Pandas & Numpy     
-     
+### Pandas & Numpy     
+ - why Numpy?
+   - it gives 'arrays' as a data structure. (multidimensional) 
+   - it gives 'statistical func'     
+ - why Pandas?
+   - it gives 'dataframes' as a data structure
+   - it gives '.read_csv()' method 
 
+>Select from a dataframe ... Condense a dataset with leaving only some columns we need ? 
+ - df`.loc[ , ]`: uses 'labels' of rows or columns to select data
+ - df`.iloc[ , ]`: uses the 'index' numbers to select data
+ 
+### 1. np.Array
+ - np.array(LIST) : **vector**
+<img src="https://user-images.githubusercontent.com/31917400/35475085-11eefd52-0390-11e8-8b18-9e830eb31485.jpg" width="700" height="100" />
 
+ - np.array([LIST, LIST]) : **matrix** 
+<img src="https://user-images.githubusercontent.com/31917400/35475130-ea34ed7a-0390-11e8-92ca-d19ae94ce020.jpg" width="700" height="160" />
 
+### 2. pd.Dataframe
+ - pd.DataFrame([LIST, LIST], columns=LIST)
+<img src="https://user-images.githubusercontent.com/31917400/35475176-a0710c4a-0391-11e8-9ab8-f76ba37f6179.jpg" width="700" height="300" />
 
+ - pd.DataFrame(dictionary)
+<img src="https://user-images.githubusercontent.com/31917400/35475250-0b6a157c-0393-11e8-8184-68c0469156e4.jpg" width="700" height="90" /> 
 
-
-
+ - rename columns
+<img src="https://user-images.githubusercontent.com/31917400/35475286-83b2a62a-0393-11e8-84a4-146e0b1525ab.jpg" width="700" height="290" /> 
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # *SQL*
