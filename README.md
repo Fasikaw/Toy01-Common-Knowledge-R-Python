@@ -3,6 +3,11 @@ Don't forget
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # *R*
+### 0. Basic
+ - Check type : `class()`
+ - 
+
+
 ### 1. vector
 Vectors must contain the same type of data, that is the entries must all be of the **same type** such as: character, logical (TRUE or FALSE), or numeric. You can add values to a vector.
  - `c()` is a generic function that combines arguments to form a vector.
@@ -413,7 +418,7 @@ head(income0813, 3)
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35473242-ef2a6290-0374-11e8-8da3-d4c83f591431.jpg" width="500" height="40" />
 
-Save these two data frames as CSV files to use later on in a different program. Specify the dataframe, file destination, and the separator. Row names are used by default, but I typically set it to "false".
+Save these two data frames as CSV files to use later on in a different program. Specify the dataframe, file destination, and the separator. Row names are used by default, but I typically set it to "FALSE".
 ```
 write.table(income_total, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/---New R/data/income-totals.csv", row.names=FALSE, sep=",")
 write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/---New R/data/income-2008-13.csv", row.names=FALSE, sep=",")
@@ -423,11 +428,32 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # *Python*
+### 0. Basic
+ - Check type: `type()` 
+ - Convert type: `int()`, `float()`, `str()`
+ - '$'`.join(str)`
+   - city = 'scjen%$38' then, '$'.join(city) --> 's$c$j$e$n$%$$$3$8'
+ - in string, \n :start a new line, \t :create a tab space
+   - print('Python is\n great!')
+   - print('Python is\t great!')
+ - METHOD for string (Methods are related to functions but each is associated with specific types) 
+   - str`.lower()` / str`.upper()` / str`.capitalize()`
+   - str`.count('alphabet')`
+   - sentence {}`.format(variable)` 
+   - str`.split()`
+   - str`.strip('char')` ---note:only works for char in the 'first' and 'last'.  
+   - str`.replace("morning", "night")`
+  
 
-
-
-
-
+ - Built-in function for **LIST**
+   - indirect: 
+     - sum(list), len(list), max(list), min(list), join(list), sorted(list, reverse=T/F)
+       - list[len(a):] = variable
+   - direct: 
+     - list`.sort()` 
+     - list`.append(value)`, list`.extend(variable)`, list`.insert(index, value)`,
+     - list`.remove(value)`, list`.clear()`  
+     - 
 
 
 
