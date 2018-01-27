@@ -501,11 +501,15 @@ Thinking about how different pieces of data relate to each other is at the heart
 >Data Type
 <img src="https://user-images.githubusercontent.com/31917400/35476878-e4f73c9a-03af-11e8-9af6-272f78e9e99d.jpg" width="500" height="600" /> 
 
+>Syntax
+ - create statement: CREATE TABLE table (col_1 value_1, col_2 value_2,...)  
+ - insert statement: INSERT table (col_1, col_2,...) VALUE (val_1, val_2,...)
 
 
+>Connect Python code into a SQL-database
+<img src="https://user-images.githubusercontent.com/31917400/35477173-c561ca98-03b5-11e8-8ea8-2d16054f3513.jpg" />
 
-
-
+```
 
 
 
