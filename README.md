@@ -493,9 +493,11 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 ------------------------------------------------------------------------------------------------------------------------------------
 # *SQL*
 
+### 0. Basic
+Thinking about how different pieces of data relate to each other is at the heart of relational databases
 
-
-
+1. Data Type
+<img src="https://user-images.githubusercontent.com/31917400/35476878-e4f73c9a-03af-11e8-9af6-272f78e9e99d.jpg" width="500" height="600" /> 
 
 
 
