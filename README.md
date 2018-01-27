@@ -301,6 +301,7 @@ levels(ses_ff)
 [1] "high"  "low"  "middle"
 
  - __Visualizing__ 
+ 
 Create an additional continuous variable called 'read' with a size 0f 20 which contains the reading scores.
 ```
 read <- c(34, 39, 63, 44, 47, 47, 57, 39, 48, 47, 34, 37, 47, 47, 39, 47, 47, 50, 28, 60)
