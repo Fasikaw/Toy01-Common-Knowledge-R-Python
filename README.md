@@ -273,7 +273,9 @@ levels(ses_order)
 ```
 [1] "low"  "middle"  "high"  
 
- - __Adding or dropping levels__
+ - __Adding or dropping 'levels'__
+
+Let's add a level ! 
 ```
 ses_f[21] <- 'veryhigh'
 ses_f
@@ -290,7 +292,7 @@ ses_f
 ```
 [1] low middle low low low low middle low middle middle middle middle middle high high low middle middle low high veryhigh
 
-Dropping levels. Note! you cannot directly remove the factor, so need to create new variable 'ses_ff' and assign factor again.  
+Let's drop the level. Note! you cannot directly remove the factor, so need to create new variable 'ses_ff' and assign factor again.  
 ```
 ses_ff <- ses_f[ses_f != "veryhigh"]; ses_ff
 ses_ff <- factor(ses_ff)
