@@ -220,38 +220,67 @@ mtcars[mtcars$mpg>=30|mtcars$hp<60, ]  # the above is better than this.
  - 'levels' argument: determines the categories of the factor variable, and the default is the sorted list of all distinct values. 
  - 'labels' argument: a vector of values that will be the labels of the categories in the levels argument. 
  - 'exclude' argument: defines which levels will be classified as NA in any output using the factor variable.
+
+Generate a vector of binary data with the size of 20
 ```
-a <- sample(0:5, 40, replace = TRUE); a
+a <- sample(0:1, 20, replace = TRUE); a
 is.factor(a)
 is.numeric(a)
 ```
-<img src="https://user-images.githubusercontent.com/31917400/35457816-1a4eba82-02d2-11e8-9a2a-5b044ce15411.jpg" width="650" height="50" />
+<img src="https://user-images.githubusercontent.com/31917400/35465532-a72fd5b8-02f4-11e8-8c19-3d2b49288407.jpg" width="650" height="50" />
 
+The first label, private, will correspond to a=0 and the second label, public, will correspond to a=1 because the order of the labels will follow the numeric order of the data. 
 ```
-f_a <- factor(a, levels=c('A', 'C', 'B', 'F', 'DAMN', 'D')); f_a
-is.factor(f_a)
-levels(f_a)
-
-f_a <- factor(a, labels=c('A', 'C', 'B', 'F', 'DAMN', 'D')); f_a
-is.factor(f_a)
-levels(f_a)
+a_f <- factor(a, labels=c('private','public')); a_f
+is.factor(a_f)
 ```
-<img src="https://user-images.githubusercontent.com/31917400/35462164-bb0d03ba-02e2-11e8-8d28-4c108f6f0b70.jpg" width="650" height="80" />
+<img src="https://user-images.githubusercontent.com/31917400/35465601-0db89c8e-02f5-11e8-8d00-51efc620128d.jpg" width="650" height="80" />
 
- - `ordered()` Create ordered factor variables. This function has the same arguments as the factor function. 
+Generate a string variable called ses (socio-economic status) in the same size as 'a' 
 ```
+ses <- c("low", "middle", "low", "low", "low", "low", "middle", "low", "middle",
+         "middle", "middle", "middle", "middle", "high", "high", "low", "middle",
+         "middle", "low", "high")
+is.character(ses)
 ```
+[1] TRUE
 
+Creating a factor variable 'ses_f'
+```
+ses_f <- factor(ses)
+is.factor(ses_f)
+levels(ses_f)
+```
+[1] "high"  "low"  "middle"
 
+>The problem is that the levels are ordered according to the alphabetical order of the categories of 'ses'..
 
+In order to fix the ordering we need to use the levels argument to indicate the "correct ordering" of the categories.
+```
+ses.f <- factor(ses, levels = c("low", "middle", "high"))
+is.factor(ses.f)
+levels(ses_f)
+```
+Create ordered factor variables by using the function: ordered().This function has the same arguments as the factor function. 
+```
+ses_order <- ordered(ses, levels=c("low", "middle", "high"))
+is.factor(ses_order)
+levels(ses_order)
+```
+Adding and dropping levels
+```
+ses_f[21] <- 'veryhigh'
+ses_f
+```
+We can see that instead of changing from “high” to “very.high”, the label was changed from “high” to <NA>. 
 
-
-
-
-
-
-
-
+To do this correctly, we need to first add the new level, “very.high”, to the factor variable ses.f which we do by using the factor function with the levels argument. Then we can finally add an element to the factor variable from the new level.
+```
+ses_f <- factor(ses_f, levels = c(levels(ses_f), "veryhigh"))
+ses_f[21] <- "veryhigh"
+ses_f
+levels(ses_f)
+```
 
 
 
