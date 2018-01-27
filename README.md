@@ -265,7 +265,7 @@ levels(ses_f)
 ```
 [1] "high"  "low"  "middle"
 
-`ordered()` We can also create 'ordered factor'. This function has the same arguments as the `factor()`. 
+`ordered(levels)` We can also create 'ordered factor'. This function has the same arguments as the `factor()`. 
 ```
 ses_order <- ordered(ses, levels=c("low", "middle", "high"))
 is.factor(ses_order)
@@ -273,24 +273,50 @@ levels(ses_order)
 ```
 [1] "low"  "middle"  "high"  
 
-
  - __Adding or dropping levels__
- 
 ```
 ses_f[21] <- 'veryhigh'
 ses_f
 ```
-We can see that instead of changing from “high” to “very.high”, the label was changed from “high” to <NA>. 
+[1] low middle low low low low middle low middle middle middle middle middle high high low middle middle low high [NA] 
+ 
+We can see that instead of changing from “high” to “very.high”, the label was changed from “high” to [NA]. 
 
-To do this correctly, we need to first add the new level, “very.high”, to the factor variable ses.f which we do by using the factor function with the levels argument. Then we can finally add an element to the factor variable from the new level.
+To do this correctly, we need to first add the new level, “very.high”, to the factor variable 'ses.f' which we do by using the factor function with the levels argument. Then we can finally add an element to the factor variable from the new level.
 ```
 ses_f <- factor(ses_f, levels = c(levels(ses_f), "veryhigh"))
 ses_f[21] <- "veryhigh"
 ses_f
-levels(ses_f)
 ```
+[1] low middle low low low low middle low middle middle middle middle middle high high low middle middle low high veryhigh
 
+Dropping levels. Note! you cannot directly remove the factor, so need to create new variable 'ses_ff' and assign factor again.  
+```
+ses_ff <- ses_f[ses_f != "veryhigh"]; ses_ff
+ses_ff <- factor(ses_ff)
+levels(ses_ff)
+```
+[1] "high"  "low"  "middle"
 
+ - __Visualizing__ 
+Create an additional continuous variable called 'read' with a size 0f 20 which contains the reading scores.
+```
+read <- c(34, 39, 63, 44, 47, 47, 57, 39, 48, 47, 34, 37, 47, 47, 39, 47, 47, 50, 28, 60)
+```
+Combining all the variables in a data frame
+```
+combo <- data.frame(a, a_f, ses, ses_f, read); combo
+table(a, ses)
+table(a_f, ses_f)
+```
+<img src="https://user-images.githubusercontent.com/31917400/35466579-efc15312-02fc-11e8-9ca0-7bab35f1fa01.jpg" width="650" height="140" />
+
+As in the tables the factor variable will indicate a better ordering of the graphs as well as add useful labels.
+```
+library(lattice)
+bwplot(a_f ~ read | ses_ff, data = combo, layout = c(2, 2))
+```
+<img src="https://user-images.githubusercontent.com/31917400/35466646-7f937c22-02fd-11e8-914c-82a833c4eb2d.jpg" width="400" height="300" />
 
 
 
