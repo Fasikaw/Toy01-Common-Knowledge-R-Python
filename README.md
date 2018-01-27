@@ -443,17 +443,25 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
    - str`.split()`
    - str`.strip('char')` ---note:only works for char in the 'first' and 'last'.  
    - str`.replace("morning", "night")`
+   - str1`.index(str2)
   
 
  - Built-in function for **LIST**
    - indirect: 
      - sum(list), len(list), max(list), min(list), join(list), sorted(list, reverse=T/F)
-       - list[len(a):] = variable
+     - 'char'.join(list) ---> returns a str consisting of the list elements joined by a separator.
+       - 'and'.join(x) ---> 'AandBandCandD'
    - direct: 
-     - list`.sort()` 
+     - list`.sort()`, list`.reverse()`  
      - list`.append(value)`, list`.extend(variable)`, list`.insert(index, value)`,
      - list`.remove(value)`, list`.clear()`  
+     - list`.count(value)`, 
+     - list`.index(value, beg-i, end-i)` shows the location of the value..within the given range..
+     - list`.pop(i)` returns the value of i index. the default is the last item.
      - 
+     
+### 1. Pandas & Numpy     
+     
 
 
 
