@@ -322,15 +322,102 @@ bwplot(a_f ~ read | ses_ff, data = combo, layout = c(2, 2))
 <img src="https://user-images.githubusercontent.com/31917400/35466646-7f937c22-02fd-11e8-914c-82a833c4eb2d.jpg" width="400" height="300" />
 
 ### 4. Simple Data formatting before Visualization 
+Datasets should be manipulated into a specified format. Not all datasets look nice. Sometimes we pull data from different sources such as - webpage, pdf, etc. We may need to reshape or rearrange our data into different format. This is a necessary step prior to conducting DataAnalysis. Load your data and get it in the right format before you can visualize it. #There are also packages to help with formatting, mainly 'dplyr' and 'tidyr'. 
+ - 1.Loaded data from CSV files
+ - 2.Subsetted data frames
+ - 3.Edited data to make it easier to manage
+ - 4.Merged multiple datasets
+The dataset here is state-level data from the United States Census Bureau's American Community Survey. It shows income averages for various demographics.
 
+__1. Load files__
+```
+income <- read.csv("C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/---New R/data/ACS_13_5YR_S1903/ACS_13_5YR_S1903.csv")
+head(income, 2)
+str(income)
+```
+<img src="https://user-images.githubusercontent.com/31917400/35473029-aaa84e0a-0371-11e8-9986-d1bbe8b067c0.jpg" width="700" height="130" />
 
+Sometimes, Be more specific. R treated the column of data as numeric instead of a character, but 'GEO.id2' is str. You can specify this 
+with the 'colClasses' argument. Note:'stringsAsFactors' is set to FALSE. Just do this always.
+```
+income <- read.csv("C:/~/ACS_13_5YR_S1903/ACS_13_5YR_S1903.csv", stringsAsFactors=FALSE, sep=",", colClasses=c("GEO.id2"="character"))
+income <- read.csv("C:/~/ACS_13_5YR_S1903/ACS_13_5YR_S1903.tsv", stringsAsFactors=FALSE, sep="\t", colClasses=c("GEO.id2"="character"))
+income <- read.csv("http://datasets.flowingdata.com/tuts/2015/load-data/ACS_13_5YR_S1903.csv", stringsAsFactors=FALSE, sep=",", colClasses=c("GEO.id2"="character"))
 
+income[1:5,c(1,2)]
+```
+<img src="https://user-images.githubusercontent.com/31917400/35473069-55b5fc2a-0372-11e8-882a-b8a5e8b45137.jpg" width="600" height="60" />
 
+__2. Subset__
 
+Maybe you just want to look at income estimates for the total population for now. This is the first seven columns (with the first two indicating region)
+```
+income_total <- income[,1:7]
+head(income_total, 3)
+summary(income_total)
+```
+<img src="https://user-images.githubusercontent.com/31917400/35473102-f8baa470-0372-11e8-9f56-9266927324c3.jpg" width="600" height="100" />
 
+You can also subset based on values using `subset()`. Let's say, maybe you only want to look at states in the 'upper quartile'.
+```
+income_upper <- subset(income_total, HC02_EST_VC02 >= 58985)
+```
 
+>You can also remove rows with missing values in any of the fields. 
+```
+income_wo_na <- na.omit(income); income_wo_na 
+income_wo_na <- na.omit(income_total); income_wo_na 
+```
+In this case, you get an empty data frame, because every state has at least one missing value amongst the 153 fields. In contrast, if you ran the function with income_total, you’d just get the same data frame, because no values are missing for the first seven columns.
 
+__3. Edit__
 
+Change column names
+```
+names(income_total) <- c("id", "FIPS", "name", "households", "households_moe", "med_income", "med_income_moe")
+```
+In income_total, you have **median** and **margin of error(moe)**. Maybe you want to add a column for minimum and another for maximum. That’s the median income column plus and minus the margin of error. 
+```
+income_total$med_min <- income_total$med_income - income_total$med_income_moe
+income_total$med_max <- income_total$med_income + income_total$med_income_moe
+```
+Convert existing column (units to the thousands). When you divide a vector by a single number, the operation is performed on each element of that vector. Same with other basic operations.
+```
+income_total$med_min <- income_total$med_min / 1000
+income_total$med_max <- income_total$med_max / 1000
+```
+__4. Merge__
+
+Load the datasets.
+```
+income2008 <- read.csv("C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/---New R/data/ACS_08_3YR_S1903/ACS_08_3YR_S1903.csv", stringsAsFactors=FALSE, sep=",", colClasses=c("GEO.id2"="character"))
+income2013 <- read.csv("C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/---New R/data/ACS_13_5YR_S1903/ACS_13_5YR_S1903.csv", stringsAsFactors=FALSE, sep=",", colClasses=c("GEO.id2"="character"))
+```
+
+Subset
+```
+income2008p <- income2008[,c("GEO.id2", "HC02_EST_VC02", "HC02_MOE_VC02")]
+income2013p <- income2013[,c("GEO.id2", "HC02_EST_VC02", "HC02_MOE_VC02")]
+```
+
+Rename headers. For the **id**, which is actually a FIPS (Federal Information Processing Standards) code, we make it the same in both datasets.
+```
+names(income2008p) <- c("FIPS", "med2008", "moe2008")
+names(income2013p) <- c("FIPS", "med2013", "moe2013")
+```
+
+Combine and bring this together
+```
+income0813 <- merge(income2008p, income2013p, by="FIPS")
+head(income0813, 3)
+```
+<img src="https://user-images.githubusercontent.com/31917400/35473242-ef2a6290-0374-11e8-8da3-d4c83f591431.jpg" width="500" height="40" />
+
+Save these two data frames as CSV files to use later on in a different program. Specify the dataframe, file destination, and the separator. Row names are used by default, but I typically set it to "false".
+```
+write.table(income_total, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/---New R/data/income-totals.csv", row.names=FALSE, sep=",")
+write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/---New R/data/income-2008-13.csv", row.names=FALSE, sep=",")
+```
 
 
 
