@@ -438,7 +438,7 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
    - print('Python is\t great!')
  - METHOD for string (Methods are related to functions but each is associated with specific types) 
    - str`.lower()` / str`.upper()` / str`.capitalize()`
-   - str`.count('alphabet')`
+   - str`.count('char')`
    - sentence {}`.format(variable)` 
    - str`.split()`
    - str`.strip('char')` ---note:only works for char in the 'first' and 'last'.  
