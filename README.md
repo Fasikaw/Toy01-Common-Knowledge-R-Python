@@ -490,6 +490,11 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
  - rename columns
 <img src="https://user-images.githubusercontent.com/31917400/35475286-83b2a62a-0393-11e8-84a4-146e0b1525ab.jpg" width="700" height="240" /> 
 
+### combining different datasets
+https://pandas.pydata.org/pandas-docs/stable/merging.html
+
+
+
 ------------------------------------------------------------------------------------------------------------------------------------
 # *SQL*
 
