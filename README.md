@@ -470,7 +470,7 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
    - it gives '.read_csv()' method 
 
 >Select from a dataframe 
-  - Select data-point ? 
+ - Select data-point ? 
    - df`.loc['row_name'or row_index ,'col_name']`
    - df`.iloc[row_index, col_index]`
  - Selct **rows**
