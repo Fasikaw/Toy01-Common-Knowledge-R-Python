@@ -469,9 +469,16 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
    - it gives 'dataframes' as a data structure
    - it gives '.read_csv()' method 
 
->Select from a dataframe ... Condense a dataset with leaving only some columns we need ? 
- - df`.loc[ , ]`: uses 'labels' of rows or columns to select data
- - df`.iloc[ , ]`: uses the 'index' numbers to select data
+>Select from a dataframe 
+  - Select data-point ? 
+   - df`.loc['row_name'or row_index ,'col_name']`
+   - df`.iloc[row_index, col_index]`
+ - Selct **rows**
+   - df`.ix[index_number]` or df`.ix[slicing]`
+   - df`.loc[[list of 'row_name']]` or df`.iloc[[list of row_index]]`
+ - Select **columns**
+   - It's a Series ! you dummy !
+ 
  
 ### 1. np.Array
  - np.array(LIST) : **vector**
