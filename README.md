@@ -500,8 +500,8 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 ### combining different datasets
 https://pandas.pydata.org/pandas-docs/stable/merging.html
 
-
-### Extra Tip_2: Trial & Error project collections
+------------------------------------------------------------------------------------------------------------
+# Extra Tip_2: Trial & Error project collections
 ## Q1.
 Write a function that returns the most frequently occurring word in a given string. For example, if the input s is `s = 'I scream you scream we all scream for ice cream'`, the result should be `scream` as it is the most frequent word in this sentence. If there is a tie for the most common word, return only one result, the first (tied) word in alphabetical order. 
     # HINT: Use the built-in split() function to transform the string s into an array
