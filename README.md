@@ -500,6 +500,11 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 ### combining different datasets
 https://pandas.pydata.org/pandas-docs/stable/merging.html
 
+### replacing wrong values tip
+<img src="https://user-images.githubusercontent.com/31917400/60037929-deea1400-96aa-11e9-8aef-333329c8b1aa.jpg" />    
+
+
+
 ------------------------------------------------------------------------------------------------------------
 # Extra Tip_2: Trial & Error project collections
 
