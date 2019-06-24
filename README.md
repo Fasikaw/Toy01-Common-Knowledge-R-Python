@@ -502,7 +502,8 @@ https://pandas.pydata.org/pandas-docs/stable/merging.html
 
 ------------------------------------------------------------------------------------------------------------
 # Extra Tip_2: Trial & Error project collections
-## Q1.
+
+## Q1. Most frequent word in the string
 Write a function that returns the most frequently occurring word in a given string. For example, if the input s is `s = 'I scream you scream we all scream for ice cream'`, the result should be `scream` as it is the most frequent word in this sentence. If there is a tie for the most common word, return only one result, the first (tied) word in alphabetical order. 
     # HINT: Use the built-in split() function to transform the string s into an array
     # HINT: Iterate through the array and count each occurance of every word using the .count() list method
@@ -531,9 +532,7 @@ if __name__ == '__main__':
     test_run()
 ```
 
-## Q2.
->practice 01. datetime module
-
+## Q2. Date & Time
 1. `datetime.datetime` is the combination of 'date'class and 'time'class.
  - my birthday?
 ```
@@ -557,7 +556,7 @@ print(today)
 ```
 /// 2018-01-23 22:50:03.543023 --- This is a 'datetime object!!!
 
-2. define date and time elements
+2. **define** date and time elements
 ```
 year = datetime.datetime.today().year
 month = datetime.datetime.today().month
@@ -654,8 +653,7 @@ print(datetime.datetime(2018,2,4,5,36,35) + datetime.timedelta(minutes=3,millise
 <img src="https://user-images.githubusercontent.com/31917400/35363531-4c377f78-0162-11e8-9d80-bd17fe3d214a.jpg" />    
 
 
->Practice 2. time module
-
+> time module
 1. it gives each individual element ? and has always sth to do with **EPOCH** ?
  - `gmtime()` gives tm_year, tm_mon, tm_mday, tm_hour, tm_min, tm_sec. 
  - Plus, 
@@ -727,7 +725,7 @@ if __name__ == "__main__":
     test()
 ```
 
-# `pd.to_datetime()`
+# [NOTE]:`pd.to_datetime()`
 (https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
 
 
