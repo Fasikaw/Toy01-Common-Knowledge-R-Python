@@ -532,9 +532,6 @@ if __name__ == '__main__':
 ```
 
 ## Q2.
->`pd.to_datetime()`
-(https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
-
 >practice 01. datetime module
 
 1. `datetime.datetime` is the combination of 'date'class and 'time'class.
@@ -730,7 +727,8 @@ if __name__ == "__main__":
     test()
 ```
 
-
+# `pd.to_datetime()`
+(https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.to_datetime.html)
 
 
 
