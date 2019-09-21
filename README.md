@@ -431,7 +431,9 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 ### 0. Basic
  - Check type: `type()` 
  - Convert type: `int()`, `float()`, `str()`, `list()`
-   - list('AB') --- ['A', 'B']
+   - ex) `list('AB')` --- ['A', 'B']
+   
+__STR__  
  - '$'`.join(str)`
    - city = 'scjen%$38' then, '$'.join(city) --> 's$c$j$e$n$%$$$3$8'
  - in string, \n :start a new line, \t :create a tab space
@@ -446,7 +448,7 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
    - str`.replace("morning", "night")`
    - str1`.index(str2)`
   
-
+__LIST__
  - Built-in function for **LIST**
    - indirect: 
      - sum(list), len(list), max(list), min(list), join(list), sorted(list, reverse=T/F)
@@ -460,7 +462,71 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
      - list`.index(value, beg-i, end-i)` shows the location of the value..within the given range..
      - list`.pop(i)` returns the value of i index. the default is the last item.
      - 
-     
+
+__LOOP__
+ - 1. Basic with LIST: 
+   - instead of retrieving the item indexes and looking up each element, we can just loop over our list using a plain "for-in" loop.
+ ```
+colors = ["red", "green", "blue", "purple"]
+
+for color in colors:
+    print(color)
+ ```
+ - 2. Basic(Range of length) with LIST
+ ```
+colors = ["red", "green", "blue", "purple"]
+
+for i in range(len(colors)):
+    print(colors[i])
+---------------------------------------------------------------------------
+presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe", "Adams", "Jackson"]
+
+for i in range(len(presidents)):
+    print("President {}: {}".format(i + 1, presidents[i]))
+ ```
+ - 3. while with LIST: 
+   - mimic the behavior of our traditional C-style 
+ ```
+colors = ["red", "green", "blue", "purple"]
+
+i = 0
+while i < len(colors):
+    print(colors[i])
+    i += 1
+ ```
+ - 4. Index & item with LIST
+   - loop over a list and retrieve both the index and the value of each item in the list
+   - `start=1` option to enumerate here is optional. If we didn’t specify this, we’d start counting at `0` by default.
+ ```
+presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe", "Adams", "Jackson"]
+
+for num, name in enumerate(presidents, start=1):
+    print("President {}: {}".format(num, name))
+ ```
+ - 5. loop over two lists simultaneously
+   - `zip` with different size lists will stop after the shortest list runs out of items.
+ ```
+colors = ["red", "green", "blue", "purple"]
+ratios = [0.2, 0.3, 0.1, 0.4]
+
+for i, color in enumerate(colors):
+    ratio = ratios[i]
+    print("{}% {}".format(ratio * 100, color))
+---------------------------------------------------------------------------
+colors = ["red", "green", "blue", "purple"]
+ratios = [0.2, 0.3, 0.1, 0.4]
+
+for color, ratio in zip(colors, ratios):
+    print("{}% {}".format(ratio * 100, color))
+ ```
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
 ### Pandas & Numpy     
  - why Numpy?
    - it gives 'arrays' as a data structure. (multidimensional) 
