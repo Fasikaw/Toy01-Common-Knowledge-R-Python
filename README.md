@@ -1,5 +1,8 @@
 # Study-[R & Python]
-Don't forget
+Computer science is fundamentally problem-solving. We can think of problem-solving as the process of taking some input (details about our problem) and generate some output (the solution to our problem). The "black box" in the middle is computer science. 
+
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # *R*
