@@ -698,7 +698,8 @@ print(d4)
 d3.timestamp(), d4.timestamp()
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35356079-3fc9b55a-0147-11e8-9e19-814763af6d3e.jpg" />    
-<img src="https://user-images.githubusercontent.com/31917400/35306223-86de549a-0094-11e8-8974-4e545792302a.jpg" />    
+       
+   <img src="https://user-images.githubusercontent.com/31917400/35306223-86de549a-0094-11e8-8974-4e545792302a.jpg" />    
 
  - `fromtimestamp()` We can convert timestamp to the date in the format.
 ```
@@ -807,6 +808,7 @@ if __name__ == "__main__":
 
 ---------------------------------------------------------------------------------------------------
 # Object Oriented Programming
+<img src="https://user-images.githubusercontent.com/31917400/77791695-08333880-705f-11ea-8a0a-af83ea322ec1.png" />    
 
 
 
