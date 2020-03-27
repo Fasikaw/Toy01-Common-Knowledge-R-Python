@@ -810,6 +810,14 @@ if __name__ == "__main__":
 # Object Oriented Programming
 <img src="https://user-images.githubusercontent.com/31917400/77791695-08333880-705f-11ea-8a0a-af83ea322ec1.png" />    
 
+Because...
+1. Reusability
+2. Maintainability
+3. Testing, Debugging
+4. Extensibility
+5. Design
+6. Modularity
+
 
 ### Two Bld-Blocks
  - 1. Classes
