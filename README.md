@@ -9,8 +9,8 @@ Computer science is fundamentally problem-solving. We can think of problem-solvi
 ### 0. Basic
  - Check type : `class()`
  - Start: `head()`,`summary()`,`str()`
- - Convert type: `df %>% convert(num(a), fct(b), dte(c), chr(d), int(e))`: 
-   - In the `df`, column`a` becomes numeric, column`b` becomes factor, column`c` becomes date, column`d` becomes character, column`e` becomes integer.
+ - Convert type: `df %>% convert(num(a), fct(b), dte(c), chr(d), int(e), dbl(f,g))`: 
+   - In the `df`, column`a` becomes numeric, column`b` becomes factor, column`c` becomes date, column`d` becomes character, column`e` becomes integer, column `f`,`g` become double. 
  - Convert type: `df %>% mutate(a = as.character(a), b = as.character(b), c = as.integer(c), d = as.double(d), e = as.numeric(e))`
 
 ### 1. vector
