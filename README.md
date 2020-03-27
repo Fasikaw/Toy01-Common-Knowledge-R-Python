@@ -9,7 +9,8 @@ Computer science is fundamentally problem-solving. We can think of problem-solvi
 ### 0. Basic
  - Check type : `class()`
  - Start: `head()`,`summary()`,`str()`
-
+ - Convert type: `df %>% convert(num(a, b), dte(c), chr(d, e))`: 
+   - In the `df`, column `a`,`b` becomes numeric, column `c` becomes date, column `d`,`e` becomes character.
 
 ### 1. vector
 Vectors must contain the same type of data, that is the entries must all be of the **same type** such as: character, logical (TRUE or FALSE), or numeric. You can add values to a vector.
@@ -433,6 +434,7 @@ write.table(income0813, "C:/Users/Minkun/Desktop/classes_1/NanoDeg/1.Data_AN/L7/
 # *Python*
 ### 0. Basic
  - Check type: `type()` 
+ - Start: `head()`,`describe()`,`info()`
  - Convert type: `int()`, `float()`, `str()`, `list()`
    - ex) `list('AB')` --- ['A', 'B']
    
