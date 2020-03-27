@@ -811,8 +811,22 @@ if __name__ == "__main__":
 <img src="https://user-images.githubusercontent.com/31917400/77791695-08333880-705f-11ea-8a0a-af83ea322ec1.png" />    
 
 
+### Two Bld-Blocks
+ - 1. Classes
+ - 2. Instances
 
+### Two Pillars
+ - 1. Encapsulation
+ - 2. Abstraction
 
+### Properties 
+### Methods
+### OO-Analysis
+### Aliasing, Mutation, Cloning
+### Inheritance, Polymorphism
+### How to work with Multiple files?
+### How to document my code using Docstrings?
+-----------------------------------------------------------------------------------------------------
 
 
 
