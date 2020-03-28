@@ -808,15 +808,20 @@ if __name__ == "__main__":
 
 ---------------------------------------------------------------------------------------------------
 # Object Oriented Programming
-<img src="https://user-images.githubusercontent.com/31917400/77791695-08333880-705f-11ea-8a0a-af83ea322ec1.png" />    
+<img src="https://user-images.githubusercontent.com/31917400/77829392-a84d9800-7119-11ea-861c-4775c8e4f9dd.png" />    
 
 Because...
+
 1. Reusability
-2. Maintainability
-3. Testing, Debugging
-4. Extensibility
-5. Design
-6. Modularity
+ - We are working on the "blue-print" representing the `Data`+`Actions` of the object. Each blue-print is a puzzle piece that comes together to create a certain functionality. 
+ - Our object comes from what we call "blue-print". We can create multiple objects from the blue-print we design.
+ - We can use the same blue-print in several different projects. 
+2. Maintainability, Testing, Debugging 
+ - We can work with different blue-prints that create different objects interacting each other in the code such that if we make a change to one of the blue-prints, the other blue-prints should not be greatly affected by that chance, or we are able to know exactly where to look.   
+3. Extensibility
+ - It is easy to add new features or functionality by using the existing functionality to avoid the code repetition.   
+4. Modularity
+ - Each object is generated from the corresponding blue-print as a separate entity in the code. They work together to achieve a common goal. 
 
 
 ### Two Bld-Blocks
