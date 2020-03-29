@@ -827,7 +827,13 @@ if __name__ == "__main__":
  - 2. Instances
 
  - ### 1. Classes
-   - Each class is a blue-print.
+   - Each class is a blue-print describing the attributes and functionality of an **object** or **abstract concept** (For example, houses, bank accounts, employees, clients, cars, products...) 
+   - Class names are nouns and they should start with an uppercase letter. If the name has more than one word, each word should be 
+capitalized.  
+   - Main Elements
+     - Class Attributes
+     - Constructor `__init__(?)`
+     - Methods
      <img src="https://user-images.githubusercontent.com/31917400/77844542-7da62280-719f-11ea-9d5e-ae62202efce0.png" />
      ```
      class <ClassName>:
