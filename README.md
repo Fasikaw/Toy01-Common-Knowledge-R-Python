@@ -828,7 +828,7 @@ if __name__ == "__main__":
  - 2. Instances
 
  - ### 1. Classes
-   - ?
+   - It's a blue-print
 
 
 
