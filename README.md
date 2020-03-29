@@ -814,8 +814,7 @@ if __name__ == "__main__":
 
 1. Reusability
  - We are working on the "blue-print" representing the `Data`+`Actions` of the object. Each blue-print is a puzzle piece that comes together to create a certain functionality. 
- - Our object comes from what we call "blue-print". We can create multiple objects from the blue-print we design.
- - We can use the same blue-print in several different projects. 
+ - We can create multiple objects from the blue-print we design and we can also use the same blue-print in several different projects. 
 2. Maintainability, Testing, Debugging 
  - We can work with different blue-prints that create different objects interacting each other in the code such that if we make a change to one of the blue-prints, the other blue-prints should not be greatly affected by that chance, or we are able to know exactly where to look.   
 3. Extensibility
@@ -828,7 +827,26 @@ if __name__ == "__main__":
  - 2. Instances
 
  - ### 1. Classes
-   - It's a blue-print
+   - Each class is a blue-print.
+     <img src="https://user-images.githubusercontent.com/31917400/77844542-7da62280-719f-11ea-9d5e-ae62202efce0.png" />
+     ```
+     class <ClassName>:
+     
+         # "Class" Attributes
+         <class attribute> = <value>
+         
+         # "Constructor" and "Instance" Attributes
+         def__init__(self, <parameters>):
+             self.<attr1> = <value1>
+             self.<attr2> = <value2>
+             ....
+             
+         # Methods
+         def <method_name> (self, <parameters>):
+             ......
+     ```
+
+   
 
 
 
