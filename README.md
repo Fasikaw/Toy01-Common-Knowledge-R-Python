@@ -831,9 +831,9 @@ if __name__ == "__main__":
    - Class names are nouns and they should start with an uppercase letter. If the name has more than one word, each word should be 
 capitalized.  
    - __Main Elements__
-     - Class Attributes
-     - Constructor `__init__(?)`
-     - Methods
+     - Class Attributes 
+     - Constructor `def __init__(?)`
+     - Methods `def blah(?)`
      <img src="https://user-images.githubusercontent.com/31917400/77844542-7da62280-719f-11ea-9d5e-ae62202efce0.png" />
      
      ```
@@ -852,6 +852,17 @@ capitalized.
          def <method_name> (self, <parameters>):
              . . . 
      ```
+   - __Example__
+     - Let's say we write a program for "Animal Shelter". 
+       - The **shelter** takes care of `dogs`, `cats`, `parrots`, `lizards`, `snakes`.
+       - There are `6 paid employees` in the staff. 
+       - The same `55 volunteers` work in the shelter every week. 
+       - `2 managers` control the logistics of the shelter and the payroll. 
+       - `Donors` are fundamental for the shelter, so the software should keep a record of them as well
+       <img src="https://user-images.githubusercontent.com/31917400/77849275-60cf1680-71c2-11ea-99be-c71c2c0e86b5.png" />
+       
+     - Write!
+     
 
 
  - ### 2. Instances  
