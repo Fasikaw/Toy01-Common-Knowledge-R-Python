@@ -848,7 +848,7 @@ capitalized.
          <class attribute> = <value>
          
          # "Constructor" and "Instance" Attributes
-         def__init__(self, <parameters>):
+         def __init__(self, <parameters>):
              self.<attr1> = <value1>
              self.<attr2> = <value2>
              . . .
@@ -869,7 +869,7 @@ capitalized.
          def __init__(self, price_param):
              self.price = price_param
      ```
-   - [Note]: what is "self"? It referring to the instance!  
+   - [Note]: what is "self"? It's referring to the instance!  
 
 
 
