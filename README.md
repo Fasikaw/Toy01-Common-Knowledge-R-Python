@@ -811,16 +811,17 @@ if __name__ == "__main__":
 <img src="https://user-images.githubusercontent.com/31917400/77896575-684cf900-7270-11ea-937d-37a234effeaa.png" /> 
 
 ## > Because...
-
-1. Reusability
- - We are working on the "blue-print" representing the `Data`+`Actions` of the object. Each blue-print is a puzzle piece that comes together to create a certain functionality. 
- - We can create multiple objects from the blue-print we design and we can also use the same blue-print in several different projects. 
-2. Maintainability, Testing, Debugging 
- - We can work with different blue-prints that create different objects interacting each other in the code such that if we make a change to one of the blue-prints, the other blue-prints should not be greatly affected by that chance, or we are able to know exactly where to look.   
+1. Modularity
+ - Each object is generated from the corresponding "blue-print" as a separate entity in the code. They work together to achieve a common goal.
+2. Reusability
+ - We are working on the "blue-print" representing the `Data`+`Actions` of the object. Each "blue-print" is a puzzle piece that comes together to create a certain functionality. 
+ - We can create multiple objects from the "blue-print" we design and we can also use the same "blue-print" in several different projects.
 3. Extensibility
- - It is easy to add new features or functionality by using the existing functionality to avoid the code repetition. You can extend the functionality of your program by adding new "blueprints" that use existing functionality from other "blueprints".   
-4. Modularity
- - Each object is generated from the corresponding blue-print as a separate entity in the code. They work together to achieve a common goal. 
+ - It is easy to add new features or functionality by using the existing functionality to avoid the code repetition. You can extend the functionality of your program by adding new "blueprints" that use existing functionality from other "blueprints". 
+4. Maintainability, Testing, Debugging 
+ - We can work with different "blue-prints" that create different objects interacting each other in the code such that if we make a change to one of the "blue-prints", the other "blue-prints" should not be greatly affected by that chance, or we are able to know exactly where to look.   
+  
+ 
 
 ### > Two Bld-Blocks
  - 1. Classes
