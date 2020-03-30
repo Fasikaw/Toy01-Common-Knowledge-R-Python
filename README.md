@@ -808,7 +808,7 @@ if __name__ == "__main__":
 
 ---------------------------------------------------------------------------------------------------
 # Object Oriented Programming
-<img src="https://user-images.githubusercontent.com/31917400/77829392-a84d9800-7119-11ea-861c-4775c8e4f9dd.png" /> 
+<img src="https://user-images.githubusercontent.com/31917400/77896575-684cf900-7270-11ea-937d-37a234effeaa.png" /> 
 
 ## > Because...
 
