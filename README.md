@@ -896,18 +896,16 @@ capitalized.
      ```
      my_dog.is_male = False
      ```
-### > Two Pillars
- - 1. Encapsulation
- - 2. Abstraction
- 
+### > Two Principles: Encapsulation & Abstraction
  - ### 1. Encapsulation
-   : It refers to bundling of `Data`(attribute) and `Actions`(method) into a class. It has a purpose of "information hiding" or "access restriction". 
-   
- 
- - ### 2. Abstraction
-   : The `interface` should be independent of the `implementation`. Let's say the classes should interact with each other as the program grows. We have to decide what part of our code(data? action?) is going to be public(accessible from anywhere) and which part (data? action?) is only accessible within a class. "Interface" as a USER'S VIEW is a part of the code that is publicly available for use, and "Implementation" as a DEVELOPER'S VIEW is a part of the code that relates "how the code is written to achieve the functionality"?   
+   : It refers to the bundling of `Data`(attribute) and `Actions`(method) into a class. It has a purpose of "information hiding" or "access restriction". 
+
+ - ### 2. Abstraction(Hierarchical Generalization)
+   : The `interface` should be independent of the `implementation`. Let's say the classes should interact with each other as the program grows. We have to decide what part of our code(data? action?) is going to be public(accessible from anywhere) and which part (data? action?) is only accessible within a class. "Interface" as a USER'S VIEW is a part of the code that is publicly available for use, and "Implementation" as a DEVELOPER'S VIEW is a part of the code that relates "how the code is written to achieve the goal functionality"?   
      <img src="https://user-images.githubusercontent.com/31917400/78508933-66100080-7782-11ea-84c5-96cda6347039.png" />
- 
+
+ - Let's see how **attributes** works to achieve the principles of Encapsulation & Abstraction. 
+
  
  
  
