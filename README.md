@@ -923,7 +923,8 @@ capitalized.
    employee01._Employee.__number  # it works if it comes with its class name.
    ```
 ### > Getters & Setters, and Properties
-Getters and Setters are `actions` as members of a class...so they are "Methods".   
+Getters and Setters are `actions` as members of a class...so they are "Methods" for the instance that can call them. Their purpose is to "get" and "set" the value of an instance attribute. **They protect `data` by providing an indirect way to access**. 
+ - __Getters__ helps access the attribute **indirectly**. 
 
 
 
