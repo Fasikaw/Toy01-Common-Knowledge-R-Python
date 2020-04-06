@@ -922,14 +922,16 @@ capitalized.
    employee01.__number            # it won't work coz it's in a "name mangling" process.
    employee01._Employee.__number  # it works if it comes with its class name.
    ```
+### > Properties: Getters & Setters
 
- 
- 
- 
- 
- 
 
-### Properties 
+
+
+
+
+
+
+
 ### Methods
 ### OO-Analysis
 ### Aliasing, Mutation, Cloning
