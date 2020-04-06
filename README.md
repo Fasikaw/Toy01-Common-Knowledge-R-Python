@@ -922,7 +922,8 @@ capitalized.
    employee01.__number            # it won't work coz it's in a "name mangling" process.
    employee01._Employee.__number  # it works if it comes with its class name.
    ```
-### > Properties: Getters & Setters
+### > Getters & Setters, and Properties
+Getters and Setters are `actions` as members of a class...so they are "Methods".   
 
 
 
@@ -931,13 +932,12 @@ capitalized.
 
 
 
-
-### Methods
-### OO-Analysis
-### Aliasing, Mutation, Cloning
-### Inheritance, Polymorphism
-### How to work with Multiple files?
-### How to document my code using Docstrings?
+### > Methods
+### > OO-Analysis
+### > Aliasing, Mutation, Cloning
+### > Inheritance, Polymorphism
+### > How to work with Multiple files?
+### > How to document my code using Docstrings?
 -----------------------------------------------------------------------------------------------------
 
 
