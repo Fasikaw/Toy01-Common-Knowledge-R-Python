@@ -905,7 +905,24 @@ capitalized.
      <img src="https://user-images.githubusercontent.com/31917400/78508933-66100080-7782-11ea-84c5-96cda6347039.png" />
 
  - Let's see how **attributes** works to achieve the principles of Encapsulation & Abstraction.
-   :  
+ - Private and Public ?
+   - No attribute is ever private in Python. They can still be accessed outside of the class, but according to the conventions, you shouldn't.
+   - There is a convention of privacy such as `_` and `__`. 
+   ```
+   class Employee:
+     
+       def __init__(self, name_param, age_param, address_param, number_param, vehicle_param=None):
+           self.name = name_param         
+           self._age = age_param           # "_"<protection-01>: Not To Access this attribute from outside of the class...
+           self._address = address_param   # "_"<protection-01>: Not To Access this attribute from outside of the class...
+           self.__number = number_param    # "__"<protection-02>: Not To Access this attribute from outside of the class...
+           self.__vehicle = vehicle_param  # "__"<protection-02>: Not To Access this attribute from outside of the class...
+   
+   employee01 = Employee("John", 56, "5th Ave", 34523, "Honda")
+   employee01._age                # it works
+   employee01.__number            # it won't work coz it's in a "name mangling" process.
+   employee01._Employee.__number  # it works if it comes with its class name.
+   ```
 
  
  
