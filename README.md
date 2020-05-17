@@ -133,6 +133,28 @@ rownames(A) <- c(1:2, 'SUM'); A
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35451432-21503d40-02bb-11e8-96ec-2ff03a525f99.jpg" />
 
+### create matrix
+```
+r_col <- numeric(740)
+p_col <- numeric(740)
+obv <- target
+test_matrix <- cbind(obv,r_col,p_col); head(test_matrix)
+```
+### add column in matrix
+```
+density <- numeric(740)
+test_matrix <- cbind(test_matrix, density); head(test_matrix)
+```
+### remove column in matrix
+```
+test_matrix[, !colnames(test_matrix) %in% c("density")]; head(test_matrix)
+test_matrix <- test_matrix[ , -4]; head(test_matrix)
+```
+### convert into dataframe
+```
+test_df <- as.data.frame(test_matrix)
+```
+
 ### 3. dataframe
  - All entry vectors (columns) should be in the same length!
 ```
