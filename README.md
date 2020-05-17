@@ -6,14 +6,14 @@ Computer science is fundamentally problem-solving. We can think of problem-solvi
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # *R*
-### 0. Basic
+## <0> Basic
  - Check type : `class()`
  - Start: `head()`,`summary()`,`str()`
  - Convert type: `df %>% convert(num(a), fct(b), dte(c), chr(d), int(e), dbl(f,g))`: 
    - In the `df`, column`a` becomes numeric, column`b` becomes factor, column`c` becomes date, column`d` becomes character, column`e` becomes integer, column `f`,`g` become double. 
  - Convert type: `df %>% mutate(a = as.character(a), b = as.character(b), c = as.integer(c), d = as.double(d), e = as.numeric(e))`
 
-### 1. vector
+## <1> vector
 Vectors must contain the same type of data, that is the entries must all be of the **same type** such as: character, logical (TRUE or FALSE), or numeric. You can add values to a vector.
  - `c()` is a generic function that combines arguments to form a vector.
 ```
@@ -50,7 +50,7 @@ L[mystery == 11]
  
  [1] "Chris Saden" "Dean Eckles" "Moira Burke"
 
-### 2. matrix
+## <2> matrix
 ```
 A <- matrix(c(1,2,3,4,5,6), 2,3); A
 ```
@@ -155,7 +155,7 @@ test_matrix <- test_matrix[ , -4]; head(test_matrix)
 test_df <- as.data.frame(test_matrix)
 ```
 
-### 3. dataframe
+## <3> dataframe
  - All entry vectors (columns) should be in the same length!
 ```
 x1 <- c(8,2,6,4,5,3,7,1,9,10)
@@ -353,7 +353,7 @@ bwplot(a_f ~ read | ses_ff, data = combo, layout = c(2, 2))
 ```
 <img src="https://user-images.githubusercontent.com/31917400/35466646-7f937c22-02fd-11e8-914c-82a833c4eb2d.jpg" width="400" height="300" />
 
-### 4. Simple Data formatting before Visualization 
+## <4> Simple Data formatting before Visualization 
 Datasets should be manipulated into a specified format. Not all datasets look nice. Sometimes we pull data from different sources such as - webpage, pdf, etc. We may need to reshape or rearrange our data into different format. This is a necessary step prior to conducting DataAnalysis. Load your data and get it in the right format before you can visualize it. #There are also packages to help with formatting, mainly 'dplyr' and 'tidyr'. 
  - 1.Loaded data from CSV files
  - 2.Subsetted data frames
